@@ -2,8 +2,9 @@ import os
 
 storage_dir = os.path.abspath('./storage')
 os.makedirs(storage_dir, exist_ok=True)
-open_singer_root_ori = os.path.join(storage_dir, 'OpenSinger')
-open_singer_root = os.path.abspath(os.path.join('../', 'OpenSinger'))
+#open_singer_root_ori = os.path.join(storage_dir, 'OpenSinger')
+open_singer_root_ori = os.path.join('/data/srinija/OpenSinger')
+open_singer_root = os.path.abspath(os.path.join('/data/srinija/OpenSinger'))
 assert os.path.exists(open_singer_root)
 if not os.path.exists(open_singer_root_ori):
     os.system(f'ln -s {open_singer_root} {open_singer_root_ori}')

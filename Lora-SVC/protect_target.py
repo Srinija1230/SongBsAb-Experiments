@@ -52,7 +52,8 @@ if __name__ == '__main__':
 
     model_dir_1 = 'saved_models'
     system_flag = f'-{args.system_type}' if args.system_type != 'lora_LSTM' else ''
-    args.threshold = -np.infty
+    #args.threshold = -np.infty
+    args.threshold = -np.inf
     if args.system_type == 'lora_LSTM':
         base_model = LoraLSTM()
     else:
